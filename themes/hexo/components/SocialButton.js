@@ -24,6 +24,7 @@ const SocialButton = () => {
   const CONTACT_XIAOHONGSHU = siteConfig('CONTACT_XIAOHONGSHU')
   const CONTACT_ZHISHIXINGQIU = siteConfig('CONTACT_ZHISHIXINGQIU')
   const CONTACT_WEHCHAT_PUBLIC = siteConfig('CONTACT_WEHCHAT_PUBLIC')
+  const CONTACT_GOOGLE_SCHOLAR = siteConfig('CONTACT_GOOGLE_SCHOLAR')
 
   const [qrCodeShow, setQrCodeShow] = useState(false)
 
@@ -179,6 +180,15 @@ const SocialButton = () => {
               </div>
             </div>
           </button>
+        )}
+        {CONTACT_GOOGLE_SCHOLAR && (
+          <a
+            target='_blank'
+            rel='noreferrer'
+            title={'Google Scholar'}
+            href={CONTACT_GOOGLE_SCHOLAR}>
+            <i className='transform hover:scale-125 duration-150 fas fa-graduation-cap dark:hover:text-indigo-400 hover:text-indigo-600' />
+          </a>
         )}
       </div>
     </div>
